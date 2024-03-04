@@ -17,7 +17,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		Principal.menu();
-		System.out.println("Elija opción");
+		
 		Scanner teclado = new Scanner(System.in);
 		int opcion = teclado.nextInt();
 		switch (opcion) {
@@ -34,11 +34,11 @@ public class Principal {
 	
 	
 	public static void menu() {
-		System.out.println("Elija la información que desee mostrar\n"
-				+ "1: Los 10 primeros corredores ordenados de menor a mayor tiempo\n"
+		System.out.println("Elija la información que desee mostrar\n\n"
+				+ "1: Los 10 primeros corredores ordenados de menor a mayor tiempo\n\n"
 				+ "2: Sólo los 3 primeros corredores de menor a mayor tiempo"
-				+ "3: Los 10 primeros corredores ordenados de mayor a menor tiempo\n"
-				+ "4: Sólo los 3 primeros corredores de mayor a menor tiempo");
+				+ "3: Los 10 primeros corredores ordenados de mayor a menor tiempo\n\n"
+				+ "4: Sólo los 3 primeros corredores de mayor a menor tiempo\n");
 		
 	}
 }// fin de la clase principal
