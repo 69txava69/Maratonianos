@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 
+ *  
  */
 public class Principal {
 
@@ -18,22 +18,25 @@ public class Principal {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		Principal.menu();
 		List<Corredor> corredores = GestionCorredores.crearListaCorredores();
-
+		menu();
 		Scanner teclado = new Scanner(System.in);
 		int opcion = teclado.nextInt();
 		switch (opcion) {
 		case 1:// lista ordenada por tiempo mostrando todo sobre los corredores
-			Collections.sort(corredores, Comparator.comparingInt(c -> c.tiempo));
+			GestionCorredores.menorAmayor();
+			break;
 		case 2:// lista ordenada de los 3 primeros de menor a mayor
+			GestionCorredores.tresMenorAmayor();
 		case 3:// lista ordenada de los 10 corredores de mayor a menor tiempo
+			Collections.reverse(corredores);
 		case 4:// lista ordenada de los 3 primeros de mayor a menor tiempo
+			GestionCorredores.tresMenorAmayor();
 
 		}// fin del switch
 
 		teclado.close();
+		
 	}// fin del main
 
 	public static void menu() {

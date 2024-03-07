@@ -67,4 +67,12 @@ public class Corredor {
 		this.tiempo = tiempo;
 	}
 
-}
+	///////////////         to string         /////////////
+	@Override
+	public String toString() {
+		return "Corredor [nombre=" + nombre + ", dorsal=" + dorsal + ", tiempo=" + tiempo + "]";
+	}
+	
+	
+
+}// fin de la clase
