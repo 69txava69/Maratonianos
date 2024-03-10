@@ -4,7 +4,11 @@
 package arrays_y_conjuntos;
 
 /**
- * 
+ * clase para objetos de tipo corredor
+ * sus atributos son nombre, dorsal y tiempo
+ * String para el nombre 
+ * nº entero para el dorsal 
+ * nº entero en min. para el tiempo
  */
 public class Corredor {
 	String nombre;
@@ -26,7 +30,7 @@ public class Corredor {
 
 	/////////////////// getters & setters //////////////////////
 	/**
-	 * @return the nombre
+	 * @return  nombre
 	 */
 	public String getNombre() {
 		return nombre;
@@ -40,7 +44,7 @@ public class Corredor {
 	}
 
 	/**
-	 * @return the dorsal
+	 * @return  dorsal
 	 */
 	public int getDorsal() {
 		return dorsal;
@@ -54,7 +58,7 @@ public class Corredor {
 	}
 
 	/**
-	 * @return the tiempo
+	 * @return  tiempo
 	 */
 	public int getTiempo() {
 		return tiempo;

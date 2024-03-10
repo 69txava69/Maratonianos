@@ -3,22 +3,19 @@
  */
 package arrays_y_conjuntos;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Scanner;
 
 /**
- *  
+ *  clase principal donde se encuentra el método main
  */
 public class Principal {
 
 	/**
-	 * @param args
+	 * @param args no usados en este momento
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Corredor> corredores = GestionCorredores.crearListaCorredores();
+		//List<Corredor> corredores = GestionCorredores.crearListaCorredores();
 		int j;
 
 		do {
@@ -42,11 +39,14 @@ public class Principal {
 				break;
 
 			}// fin del switch
-
+			teclado.close();
 		} while (j < 5);
-
-	}// fin del main
-
+	}// fin del main///////////////////////////////////////////////////
+	
+	
+/**
+ * método que se usa para mostrar un menu de elección al usuario
+ */
 	public static void menu() {
 		System.out.println("Elija la información que desee mostrar\n\n"
 				+ "1: Los 10 primeros corredores ordenados de menor a mayor tiempo\n\n"

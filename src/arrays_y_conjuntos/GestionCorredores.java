@@ -9,13 +9,14 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 /** 
- * 
+ * Clase para crear una lista con el objeto corredor y tener los metodos que nos ayuden a poder dar lo que nos pide 
+ * el menu de la clase principal
  */
 public class GestionCorredores {
 	static ArrayList<Corredor> corredores = new ArrayList<>();
 
 	/**
-	 * 
+	 * Primer método que nos permite instanciar un corredor o más y después añadirlo a una lista
 	 */
 	public static ArrayList<Corredor> crearListaCorredores() {
 		Scanner teclado = new Scanner(System.in);
@@ -43,9 +44,14 @@ public class GestionCorredores {
 	}// fin del metodo
 
 	//////////////// lista de menor a mayor tiempo ////////////////////
+	
+	/**
+	 * método que ordena la lista de menor a mayor y saca por pantalla 
+	 * los primeros 10 corredores.La lista tiene que tener al menos 10 corredores para que no de error
+	 */
 	public static void menorAmayor() {
-		Collections.sort(corredores, Comparator.comparingInt(c -> c.getTiempo()));
-		for (Corredor corredor : corredores) {
+		Collections.sort(corredores, Comparator.comparingInt(c -> c.getTiempo()));   //c.->c.getTiempo es una expresión lambda que nos ayuda a realizar expresiones más legibles
+		for (Corredor corredor : corredores.subList(0,10)) {
 			System.out.println(corredor+"\n");
 		}
 	}
@@ -53,6 +59,11 @@ public class GestionCorredores {
 	///////////////// 
 	//lista de los 3 primeros de menor a mayor tiempo
 	///////////////// ///////////////
+	
+	/**
+	 * método que ordena la lista de menor a mayor y saca por pantalla 
+	 * los primeros 3 corredores.La lista tiene que tener al menos 3 corredores para que no de error
+	 */
 	public static void tresMenorAmayor() {
 		Collections.sort(corredores, Comparator.comparingInt(c -> c.getTiempo()));
 
@@ -60,10 +71,13 @@ public class GestionCorredores {
 			System.out.println(corredor + "\n");
 		}
 	}
-
+/**
+ * método que ordena la lista de mayor a menor tiempo y saca por pantalla 
+	 * los primeros 10 corredores.La lista tiene que tener al menos 10 corredores para que no de error
+ */
 	public static void alReves() {
 		Collections.reverse(corredores);
-		for (Corredor corredor : corredores) {
+		for (Corredor corredor : corredores.subList(0, 10)) {
 			System.out.println(corredor + "\n");
 		}
 	}
@@ -72,6 +86,10 @@ public class GestionCorredores {
 	//lista de los 3 primeros de mayor a menor tiempo
 	////////////////// //////////////////
 
+	/**
+	 * método que ordena la lista de mayor a menor y saca por pantalla 
+	 * los primeros 3 corredores.La lista tiene que tener al menos 3 corredores para que no de error
+	 */
 	public static void tresMayorAMenor() {
 		Collections.reverse(corredores.subList(0, 3));
 		for (Corredor corredor : corredores) {
